@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="160.0" prefWidth="630.0" style="-fx-background-color: #9980e6;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label fx:id="songLabel" alignment="CENTER" prefHeight="90.0" prefWidth="630.0" text="MP3 Player" textFill="#ffcce6">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="songProgressBar" layoutY="92.0" prefHeight="18.0" prefWidth="630.0" progress="0.0" />
+      <Button fx:id="playButton" layoutY="110.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="50.0" prefWidth="80.0" text="PLAY">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="pauseButton" layoutX="80.0" layoutY="110.0" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="50.0" prefWidth="80.0" text="PAUSE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="resetButton" layoutX="160.0" layoutY="110.0" mnemonicParsing="false" onAction="#resetMedia" prefHeight="50.0" prefWidth="80.0" text="RESET">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="previousButton" layoutX="240.0" layoutY="110.0" mnemonicParsing="false" onAction="#previousMedia" prefHeight="50.0" prefWidth="80.0" text="PREVIOUS" />
+      <Button fx:id="nextButton" layoutX="320.0" layoutY="110.0" mnemonicParsing="false" onAction="#nextMedia" prefHeight="50.0" prefWidth="80.0" text="NEXT">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="speedBox" layoutX="400.0" layoutY="110.0" onAction="#changeSpeed" prefHeight="50.0" prefWidth="80.0" promptText="SPEED" />
+      <Slider fx:id="volumeSlider" layoutX="480.0" layoutY="128.0" max="200.0" prefHeight="14.0" prefWidth="150.0" value="50.0" />
+   </children>
+</AnchorPane>
